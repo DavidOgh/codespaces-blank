@@ -1,4 +1,5 @@
 import express from "express";
+import weatherRoute from "./routes/weatherRoute";
 
 // We will create an express app
 const app = express();
