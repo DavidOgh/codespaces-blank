@@ -26,6 +26,7 @@ export const getWeatherData = async (req, res) => {
         else {
             // If the city is not london, dublin or Lagos we will throw an error
             res.status(404).send("City not found");
+        return;
         }
         // We will return the weather data as JSON
         res.status(200).json(finalWeatherData);
