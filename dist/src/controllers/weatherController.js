@@ -1,6 +1,4 @@
-import { Request, Response } from "express";
-import { generateDublinWeatherData, generateLondonWeatherData, generateLagosWeatherData, } 
-from "../services/weatherService.js";
+import { generateDublinWeatherData, generateLondonWeatherData, generateLagosWeatherData, } from "../services/weatherService.js";
 /**
  * Gets the weather data for a city
  * @param req the request object
@@ -28,7 +26,7 @@ export const getWeatherData = async (req, res) => {
         else {
             // If the city is not london, dublin or Lagos we will throw an error
             res.status(404).send("City not found");
-        return;
+            return;
         }
         // We will return the weather data as JSON
         res.status(200).json(finalWeatherData);
